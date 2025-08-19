@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Menu - Tumpeng Lengkap</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+        }
+        .detail-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 25px;
+            display: flex;
+            gap: 30px;
+            position: relative;
+        }
+        .back-link {
+            position: absolute;
+            top: 10px;
+            right: 25px; 
+            text-decoration: none;
+            color: #b9770e;
+            font-size: 0.9rem;
+        }
+        .detail-image {
+            width: 45%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .detail-content {
+            width: 55%;
+        }
+        .detail-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+        .detail-price {
+            font-size: 1.1rem;
+            color: #b9770e;
+            margin: 10px 0;
+        }
+        .detail-desc {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        .btn-order {
+            display: inline-block;
+            margin-top: 15px;
+            background: #b9770e;
+            color: #fff;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        @media (max-width: 768px) {
+            .detail-container {
+                flex-direction: column;
+            }
+            .detail-image, .detail-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="detail-container">
+        <a href="menu.html" class="back-link" style="margin-left: 40px;">← Kembali ke Menu</a>
+        <img src="/pawon adji/tumpeng.png" alt="Tumpeng" class="detail-image">
+
+        <div class="detail-content">
+            <h1 class="detail-title">Tumpeng Lengkap</h1>
+            <p class="detail-price">Rp. 75.000,00</p>
+            <p class="detail-desc">
+                Menu tumpeng lengkap ini cocok untuk acara spesial seperti ulang tahun, syukuran,
+                atau acara keluarga. Dilengkapi dengan lauk pauk lengkap seperti ayam goreng,
+                telur balado, sambal goreng, mie goreng, dan sayuran segar.
+            </p>
+            <p class="detail-desc">
+                *Minimal pemesanan H-1. Bisa request level pedas dan jenis lauk sesuai keinginan.*
+            </p>
+            <a href="" class="btn-order">Pesan Sekarang</a>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<!-- 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Menu - <?php echo $namaMenu; ?></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+        }
+        .detail-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 25px;
+            display: flex;
+            gap: 30px;
+        }
+        .detail-image {
+            width: 45%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .detail-content {
+            width: 55%;
+        }
+        .back-link {
+            text-decoration: none;
+            color: #b9770e;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .detail-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+        .detail-price {
+            font-size: 1.1rem;
+            color: #b9770e;
+            margin: 10px 0;
+        }
+        .detail-desc {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        .btn-order {
+            display: inline-block;
+            margin-top: 15px;
+            background: #b9770e;
+            color: #fff;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        @media (max-width: 768px) {
+            .detail-container {
+                flex-direction: column;
+            }
+            .detail-image, .detail-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<?php
+    // Contoh data (bisa ganti manual / ambil dari DB nanti)
+    $namaMenu  = "Tumpeng Lengkap";
+    $harga     = "Rp. 75.000,00";
+    $gambar    = "/pawon adji/tumpeng.png";
+    $deskripsi1 = "Menu tumpeng lengkap ini cocok untuk acara spesial seperti ulang tahun, syukuran, atau acara keluarga. Dilengkapi dengan lauk pauk lengkap seperti ayam goreng, telur balado, sambal goreng, mie goreng, dan sayuran segar.";
+    $deskripsi2 = "*Minimal pemesanan H-1. Bisa request level pedas dan jenis lauk sesuai keinginan.*";
+?>
+
+<a href="menu.php" class="back-link" style="margin-left: 40px;">← Kembali ke Menu</a>
+
+<div class="detail-container">
+    <img src="<?= $gambar; ?>" alt="<?= $namaMenu; ?>" class="detail-image">
+
+    <div class="detail-content">
+        <h1 class="detail-title"><?= $namaMenu; ?></h1>
+        <p class="detail-price"><?= $harga; ?></p>
+        <p class="detail-desc"><?= $deskripsi1; ?></p>
+        <p class="detail-desc"><?= $deskripsi2; ?></p>
+
+        <a href="https://wa.me/08xxxx" class="btn-order">Pesan Sekarang</a>
+    </div>
+</div>
+
+</body>
+</html>
+-->

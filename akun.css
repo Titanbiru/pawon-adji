@@ -203,8 +203,9 @@ body{
 }
 
 .akun-actions button {
-    width: 120px;
+    width: 150px;
     height: 40px;
+    padding: 0 1.2rem;
     font-size: 0.8rem;
     font-weight: bold;
     border: none;
@@ -220,34 +221,38 @@ body{
     transform: scale(1.05);
 }
 
-/* .akun-actions button {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #96550A;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.akun-actions button:hover {
-    background-color: #C26C0A;
-} */
-
 @media screen and (max-width: 768px) {
     .akun-actions {
         flex-direction: column;
         align-items: center;
     }
-
     .akun-actions button {
-        width: 220px;
+        width: 150px;
         margin-bottom: 0.5rem;
     }
-
     .akun-actions button:last-child {
         margin-bottom: 0;
     }
+    .poto-profil{
+        width: 50px;
+        height: 50px;
+    }
+    .title{
+        font-size: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+    .riwayat .title{
+        margin-top: 0.8rem;
+    }
+}
+
+.edit-profil {
+    display: none;
+}
+
+.btn .active {
+    background-color: #C26C0A;
+    color: white;
 }
 
 .riwayat {
@@ -256,6 +261,10 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
+}
+
+.riwayat .title {
+    margin-top: 0.8rem;
 }
 
 .riwayat-item {
@@ -268,3 +277,74 @@ body{
     align-items: center;
 }
 
+/* Bagian Edit Profil */
+.edit-profil {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+}
+
+.edit-profil h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #96550A;
+    font-size: 1.2rem;
+}
+
+.edit-profil form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.edit-profil label {
+    font-weight: bold;
+    margin-top: 0.5rem;
+    color: #333;
+}
+
+.edit-profil input[type="text"],
+.edit-profil input[type="email"],
+.edit-profil input[type="password"],
+.edit-profil input[type="file"] {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: 'Arial', sans-serif;
+}
+
+.edit-profil input[type="file"] {
+    padding: 0.4rem;
+    background-color: #f8f8f8;
+}
+
+.btn-simpan {
+    width: 160px;
+    padding: 0.6rem;
+    background-color: #96550A;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    margin-top: 1rem;
+    align-self: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-simpan:hover {
+    background-color: #C26C0A;
+    transform: scale(1.05);
+}
+
+/* Responsive untuk mobile */
+@media screen and (max-width: 768px) {
+    .edit-profil {
+        padding: 1rem;
+    }
+    .btn-simpan {
+        width: 100%;
+    }
+}
