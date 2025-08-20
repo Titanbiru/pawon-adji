@@ -163,16 +163,19 @@ body{
 }
 
 .konten {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 2rem;
     background-color: #fff;
-    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding-top: 8rem;
+    padding-top: 7rem;
 }
 
 .title {
     font-size: 1rem;
     font-weight: bold;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     text-align: center;
 }
@@ -194,6 +197,21 @@ body{
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.biodata {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.biodata p {
+    width: 250px;
+    display: flex;
+    text-align: left;
+    line-height: 1.2rem;
+    font-size: 0.9rem;
+    margin: 0 auto;
 }
 
 .akun-actions {
@@ -239,10 +257,7 @@ body{
     }
     .title{
         font-size: 0.8rem;
-        margin-bottom: 0.8rem;
-    }
-    .riwayat .title{
-        margin-top: 0.8rem;
+        margin: 0.2rem auto 0.8rem;
     }
 }
 
@@ -263,27 +278,73 @@ body{
     gap: 1rem;
 }
 
-.riwayat .title {
-    margin-top: 0.8rem;
-}
-
-.riwayat-item {
+.order-card {
     background-color: #fff;
     border-radius: 10px;
     padding: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
 }
 
-/* Bagian Edit Profil */
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.order-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.order-info {
+    flex: 1;
+}
+
+.lihat-semua-btn {
+    background: none;
+    border: none;
+    color: #ff6000;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-left: 5rem;
+    margin-top: -0.5rem;
+}
+
+.order-actions {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.btn-action {
+    background-color: #fff;
+    color: #ff6000;
+    border: 1px solid #ff6000;
+    border-radius: 5px;
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
 .edit-profil {
     background-color: #ffffff;
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .edit-profil h2 {

@@ -24,11 +24,12 @@ body {
 
 .navbar {
     background-color: #96550A;
-    box-shadow: 0px 0px 20px 5px gray;
+    box-shadow: 0 0px 0px 5px gray;
     padding: 5px 10px;
     width: 100%;
     position: fixed;
     z-index: 99;
+    padding: 1rem;
 }
 
 .nav-left {
@@ -54,7 +55,6 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    position: relative;
 }
 
 .navbar-item ul {
@@ -126,7 +126,9 @@ body {
     }
 
     .navbar .nav-item:not(:last-child) {
-        border-right: 1px solid #ccc; /* warna garis */
+        margin-right: 1rem;
+        padding-right: 1rem;
+        border-right: 1px solid #ccc;
     }
     
 }
@@ -155,10 +157,18 @@ body {
     }
 }
 
+.navbar-toggler.active .navbar-item {
+    display: flex;
+}
+
 .konten {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding-top: 1rem;
 }
 
 .hero-img {
@@ -222,9 +232,7 @@ body {
 }
 
 .tentang-kami{
-    background-color: #FBF2E7;
     height: auto;
-    /* height: 250px; */
     padding: 2rem;
 }
 
@@ -285,7 +293,6 @@ body {
 }
 
 .favorit { 
-    background-color: #FBF2E7;
     padding: 2rem;
     text-align: center;
 }
@@ -410,7 +417,6 @@ body {
 }
 
 .menu {
-    background-color: #FBF2E7;
     padding: 2rem;
     text-align: center;
 }
@@ -553,7 +559,6 @@ body {
 }
 
 .kata-mereka {
-    background-color: #FBF2E7;
     padding: 2rem;
 }
 
