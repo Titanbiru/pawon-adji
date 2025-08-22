@@ -221,7 +221,7 @@ body{
 
 .chart-card canvas {
     width: 100% !important;
-    height: 250px !important; /* sesuaikan tinggi biar ga kepotong */
+    height: 250px !important; 
 }
 
 .chart-card, .table-card {
