@@ -11,7 +11,7 @@
         <div class="nav-container">
             <div class="nav-left">
                 <a href="#home">
-                    <h1>Pawon Adji - Admin</h1>
+                    <h1>Pawon Adji - Penjual</h1>
                 </a>
                 <button class="navbar-toggler" type="button" aria-expanded="false" id="navbar-toggler"  onclick="document.getElementById('navbar-item').classList.toggle('show')">
                     <span class="hamburger-bar"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h22M5 16h22M5 24h22"/></svg></span>
@@ -37,6 +37,25 @@
     </nav>
     <div class="konten">
         <div class="container-konten">
+            <section class="button-header">
+                <div>
+                    <a href="#" class="add-new-btn" onclick="openPopup('popupTambahMenu')">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"/>
+                        </svg>
+                        Tambah Menu
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="add-new-btn" onclick="openPopup('popupTambahKategori')">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"/>
+                        </svg>
+                        Tambah Kategori
+                    </a>
+                </div>
+            </section>
+
             <section class="menu">
                 <section class="Jajanan Pasar" id="category">
                     <div class="title">
