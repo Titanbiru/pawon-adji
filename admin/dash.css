@@ -19,7 +19,7 @@ body{
 }
 
 .navbar {
-    background-color: #96550A;
+    background-color: #FF9B45;
     box-shadow: 0 0px 0px 5px gray;
     padding: 5px 10px;
     width: 100%;
@@ -36,7 +36,7 @@ body{
 
 .navbar a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 .navbar h1 {
@@ -66,7 +66,7 @@ body{
 }
 
 .navbar-item a:hover {
-    background-color: #C26C0A;
+    background-color: #DE651A;
 }
 
 .navbar-toggler {
@@ -86,9 +86,17 @@ body{
 }
 
 .navbar-toggler:hover {
-    background-color: #C26C0A;
-    border: 2px solid rgb(0, 0, 0, 60%);
+    background-color: #FF9B45;
+    border: 1px solid black;
     border-radius: 5px;
+}
+
+.nav-link svg{
+    color: black;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+    transition: color 0.3s;
 }
 
 @media screen and (min-width: 769px) {
@@ -118,7 +126,7 @@ body{
     .navbar-item {
         display: none;
         flex-direction: column;
-        background-color: #96550A;
+        background-color: #FF9B45;
         padding: 1rem;
         width: 100%;
         transition: max-height 0.3s ease-in-out;
@@ -179,7 +187,7 @@ body{
     line-height: 1.5rem;
     border: 2px solid #C26C0A;
     border-radius: 15px;
-    padding: 1rem 2rem 1rem 0.5rem;
+    padding: 1rem 2.5rem 1rem 2.5rem;
 }
 
 @media screen and (max-width:768px) {
@@ -236,7 +244,6 @@ body{
 .chart-card h2, .table-card h2 {
     text-align: center;
     margin-bottom: 1rem;
-    color: #96550A;
     font-size: 1.2rem;
 }
 
@@ -259,7 +266,7 @@ body{
 }
 
 .order-table th {
-    background-color: #96550A;
+    background-color: #DE651A;
     color: white;
 }
 

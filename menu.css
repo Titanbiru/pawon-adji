@@ -33,7 +33,7 @@ section:last-child {
 }
 
 .navbar {
-    background-color: #96550A;
+    background-color: #FF9B45;
     box-shadow: 0 0px 0px 5px gray;
     padding: 5px 10px;
     width: 100%;
@@ -50,7 +50,7 @@ section:last-child {
 
 .navbar a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 .navbar h1 {
@@ -73,21 +73,15 @@ section:last-child {
     gap: 1rem;
 }
 
-.tas svg {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    color: white;
-}
-
 .navbar-item a {
     padding: 0.5rem 0.75rem;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: background 0.3s, color 0.3s;
 }
 
 .navbar-item a:hover {
-    background-color: #C26C0A;
+    color: white;
+    background-color: #DE651A;
 }
 
 .navbar-toggler {
@@ -107,13 +101,13 @@ section:last-child {
 }
 
 .navbar-toggler:hover {
-    background-color: #C26C0A;
-    border: 2px solid rgb(0, 0, 0, 60%);
+    background-color: #FF9B45;
+    border: 1px solid black;
     border-radius: 5px;
 }
 
 .nav-link svg{
-    color: white;
+    color: black;
     width: 1.5rem;
     height: 1.5rem;
     vertical-align: middle;
@@ -147,7 +141,7 @@ section:last-child {
     .navbar-item {
         display: none;
         flex-direction: column;
-        background-color: #96550A;
+        background-color: #FF9B45;
         padding: 1rem;
         width: 100%;
         transition: max-height 0.3s ease-in-out;
@@ -181,34 +175,6 @@ section:last-child {
     padding-top: 7rem;
 }
 
-.hero {
-    width: 100%;
-    height: 5rem;
-    text-align: center;
-    align-items: left;
-    padding: 0 2rem;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    color: #96550A;
-    margin-bottom: 0.5rem;
-    font-family: lobster;
-}
-
-@media screen and (max-width: 768px) {
-    .hero h1 {
-        font-size: 1.2rem;
-    }
-    .hero p {
-        font-size: 0.9rem;
-    }
-    .hero {
-        padding: 5rem 1rem;
-        margin: 0 0 1rem 0;
-    }
-}
-
 .kategori {
     margin: 2.5rem auto 0;
     padding: 0 20px;
@@ -219,10 +185,9 @@ section:last-child {
 }
 
 .kategori h2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
     font-family: lobster;
-    color: #96550A;
     text-align: left;
 }
 
@@ -249,11 +214,11 @@ section:last-child {
     border-radius: 8px;
     color: #333;
     text-decoration: none;
-    transition: background 0.3s;
+    transition: background 0.3s, color 0.3s;
 }
 
 .kategori a:hover {
-    background: #C26C0A;
+    background: #DE651A;
     color: #fff;
 }
 
@@ -346,7 +311,6 @@ section:last-child {
 
 .card .deskripsi h5 {
     font-size: 1rem;
-    color: #96550A;
     margin: 0.5rem 0;
 }
 
@@ -356,10 +320,13 @@ section:last-child {
     margin: 0.5rem 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 button {
-    background-color: #96550A;
+    background-color: #FF9B45;
     border: none;
-    color: white;
     padding: 0.5rem 0.8rem;
     text-align: center;
     text-decoration: none;
@@ -368,29 +335,41 @@ button {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: background 0.3s, color 0.3s;
 }
 
 button:hover{
-    background: #C26C0A;
+    background: #DE651A;
+    color: #fff;
 }
+
 @media screen and (max-width: 768px) {
     .container-card {
         flex-direction: column;
         align-items: center;
     }
     .card {
-        width: 100%;
+        width: 90%;
         max-width: 300px;
         margin: 10px 0;
     }
-    
+    .card img {
+        height: 180px;
+    }
+    .card .deskripsi h4 {
+        font-size: 1rem;
+    }
+    .card .deskripsi h5 {
+        font-size: 0.9rem;
+    }
+    .card .deskripsi p {
+        font-size: 0.8rem;
+    }
 }
 
 footer {
     width: 100%;
-    background-color: #96550A;
-    color: white;
+    background-color: #E5720F;
     padding: 1rem 0;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
@@ -437,19 +416,18 @@ footer {
     text-decoration: none;
 }
 
-
 .footer-mid h2 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
 .footer-mid li a {
-    color: white;
+    color: black;
     line-height: 2;
     text-decoration: none;
     padding: 0.3rem 1rem;
     border-radius: 5px;
-    transition: background-color 0.5s;
+    transition: background-color 0.5s, color 0.3s;
 }
 
 .footer-mid li {
@@ -457,8 +435,8 @@ footer {
 }
 
 .footer-mid li a:hover {
-    /* color: white; */
-    background-color: #D7780B;
+    color: white;
+    background-color: #DE651A;
     padding: 0.3rem 1rem;
 }
 
@@ -495,12 +473,13 @@ footer {
 }
 
 .footer-kontak .sosmed li a svg {
-    color: white;
+    color: black;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 .footer-kontak .sosmed li a svg:hover {
-    color: #D7780B;
+    color: white;
 }
 
 .footer-kontak .container-kontak{

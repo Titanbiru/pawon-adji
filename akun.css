@@ -24,7 +24,7 @@ body{
 }
 
 .navbar {
-    background-color: #96550A;
+    background-color: #FF9B45;
     box-shadow: 0 0px 0px 5px gray;
     padding: 5px 10px;
     width: 100%;
@@ -41,7 +41,7 @@ body{
 
 .navbar a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 .navbar h1 {
@@ -64,21 +64,15 @@ body{
     gap: 1rem;
 }
 
-.tas svg {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    color: white;
-}
-
 .navbar-item a {
     padding: 0.5rem 0.75rem;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: background 0.3s, color 0.3s;
 }
 
 .navbar-item a:hover {
-    background-color: #C26C0A;
+    color: white;
+    background-color: #DE651A;
 }
 
 .navbar-toggler {
@@ -98,13 +92,13 @@ body{
 }
 
 .navbar-toggler:hover {
-    background-color: #C26C0A;
-    border: 2px solid rgb(0, 0, 0, 60%);
+    background-color: #FF9B45;
+    border: 1px solid black;
     border-radius: 5px;
 }
 
 .nav-link svg{
-    color: white;
+    color: black;
     width: 1.5rem;
     height: 1.5rem;
     vertical-align: middle;
@@ -138,7 +132,7 @@ body{
     .navbar-item {
         display: none;
         flex-direction: column;
-        background-color: #96550A;
+        background-color: #FF9B45;
         padding: 1rem;
         width: 100%;
         transition: max-height 0.3s ease-in-out;
@@ -228,14 +222,14 @@ body{
     font-weight: bold;
     border: none;
     border-radius: 5px;
-    background-color: #96550A;
-    color: white;
+    background-color: #FF9B45;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s, transform 0.2s, color 0.3s;
 }
 
 .akun-actions button:hover {
-    background-color: #C26C0A;
+    color: white;
+    background-color: #DE651A;
     transform: scale(1.05);
 }
 
@@ -282,7 +276,7 @@ body{
     background-color: #fff;
     border-radius: 10px;
     padding: 1rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
     margin-bottom: 1rem;
 }
 
