@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu-Penjual</title>
     <link rel="stylesheet" href="menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -20,16 +21,16 @@
             <div class="navbar-item" id="navbar-item">
                 <ul>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#home">Dashboard</a>
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#kontak">Menu</a>
+                        <a class="nav-link" href="menu.html">Menu</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="#menu">Pesanan</a>
+                        <a class="nav-link" href="order.html">Pesanan</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="#menu">Akun</a>
+                        <a class="nav-link" href="akun.html">Akun</a>
                     </li>
                 </ul>
             </div>
@@ -58,14 +59,6 @@
                             <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"/>
                         </svg>
                         Tambah Menu
-                    </a>
-                </div>
-                <div>
-                    <a href="#" class="add-new-btn" onclick="openPopup('popupTambahKategori')">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"/>
-                        </svg>
-                        Tambah Kategori
                     </a>
                 </div>
             </section>
@@ -106,6 +99,14 @@
 
                         <label>Deskripsi</label>
                         <textarea placeholder="Masukkan deskripsi"></textarea>
+
+                        <label>Kategori</label>
+                        <select>
+                            <option value="" disabled selected>Pilih kategori</option>
+                            <option value="makanan">Makanan</option>
+                            <option value="minuman">Minuman</option>
+                            <option value="snack">Jajanan</option>
+                        </select>
 
                         <label>Upload Gambar</label>
                         <input type="file">
@@ -165,9 +166,9 @@
         </div>
     </div>
     <script>
-        
         const input = document.getElementById('menuSearch');
         const btn = document.getElementById('btnSearch');
+        
         function openPopup(id) {
         document.getElementById(id).style.display = "flex";
         }

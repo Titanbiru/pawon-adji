@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keranjang mu</title>
     <link rel="stylesheet" href="cart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -19,22 +20,20 @@
             </div>
             <div class="navbar-item" id="navbar-item">
                 <ul>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#home">Beranda</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#kontak">Kontak</a>
+                        <a class="nav-link" href="/pawon adji/index.html#kontak">Kontak</a>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#menu">Menu</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
                     </li>
-                </ul>
-                <ul>
                     <li class="nav-item tas">
-                        <a class="nav-link" href="" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linejoin="round" d="M2.31 11.243A1 1 0 0 1 3.28 10h17.44a1 1 0 0 1 .97 1.242l-1.811 7.243A2 2 0 0 1 17.939 20H6.061a2 2 0 0 1-1.94-1.515z"/><path stroke-linecap="round" d="M9 14v2m6-2v2m-9-6l4-6m8 6l-4-6"/></g></svg></a>
+                        <a class="nav-link" href="cart.html" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linejoin="round" d="M2.31 11.243A1 1 0 0 1 3.28 10h17.44a1 1 0 0 1 .97 1.242l-1.811 7.243A2 2 0 0 1 17.939 20H6.061a2 2 0 0 1-1.94-1.515z"/><path stroke-linecap="round" d="M9 14v2m6-2v2m-9-6l4-6m8 6l-4-6"/></g></svg></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="" >Akun</a>
+                        <a class="nav-link active" href="akun.html" >Akun</a>
                     </li>
                 </ul>
             </div>
@@ -84,7 +83,6 @@
                 </div>
         </div>
     </div>
-
     <script>
         function updateTotal() {
             let total = 0;
@@ -103,10 +101,12 @@
             document.getElementById('total-price').innerText = 'Rp' + total.toLocaleString('id-ID');
         }
 
+        // Event listener checkbox
         document.querySelectorAll('.item-check').forEach(cb => {
             cb.addEventListener('change', updateTotal);
         });
 
+        // Tombol + dan -
         document.querySelectorAll('.inc-btn').forEach(btn => {
             btn.addEventListener('click', function() {
                 const input = btn.parentNode.querySelector('.qty-input');
@@ -125,17 +125,7 @@
             });
         });
 
-        // ===== Select All =====
-        const checkAll = document.getElementById('check-all');
-        checkAll.addEventListener('change', function() {
-            const allItemCbx = document.querySelectorAll('.item-check');
-            allItemCbx.forEach(cb => {
-                cb.checked = checkAll.checked;
-            });
-            updateTotal();
-        });
-
-        // ===== Delete / Hapus =====
+        // Hapus item
         document.querySelectorAll('.delete-btn').forEach(btn => {
             btn.addEventListener('click', function() {
                 const card = btn.closest('.cart-item');
@@ -144,9 +134,37 @@
             });
         });
 
-        // Initial Total
+        // Checkout ke WhatsApp
+        document.querySelector('.checkout-btn').addEventListener('click', function() {
+            let pesan = "Halo, saya ingin pesan:\n";
+            let total = 0;
+
+            const items = document.querySelectorAll('.cart-item');
+            items.forEach(item => {
+                const checkbox = item.querySelector('.item-check');
+                if (checkbox.checked) {
+                    const name = item.querySelector('.item-name').innerText;
+                    const note = item.querySelector('.item-note').innerText;
+                    const qty = item.querySelector('.qty-input').value;
+                    const price = parseInt(item.querySelector('.item-price').getAttribute('data-price'));
+
+                    total += price * qty;
+                    pesan += `- ${name} (${note}) x${qty}\n`;
+                }
+            });
+
+            pesan += `\nTotal: Rp${total.toLocaleString('id-ID')}`;
+
+            const nomorWA = "6283123250381";
+            const url = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
+
+            window.open(url, "_blank");
+        });
+
+        // Inisialisasi
         updateTotal();
     </script>
+
 
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RIwayat Pesanan-Admin</title>
-    <link rel="stylesheet" href="order.css">
+    <title>Kategori - Admin</title>
+    <link rel="stylesheet" href="categori.css">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -41,53 +41,56 @@
     </nav>
     <div class="konten">
         <div class="title">
-            <h2>Riwayat Pesanan</h2>
+            <h2>Edit Kategori</h2>
         </div>
-
-        <div class="table-container">
-            <table>
+        <div class="table-wrapper">
+            <table class="table">
                 <thead>
                     <tr>
-                        <th>No</th>
-                        <th>Nama Pembeli</th>
-                        <th>Menu</th>
-                        <th>Jumlah</th>
-                        <th>Total Harga</th>
-                        <th>Status</th>
-                        <th>Tanggal</th>
+                        <td>No</td>
+                        <td>Kategori</td>
+                        <td>Deskripsi</td>
+                        <td>Edit</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Budi Santoso</td>
-                        <td>Tumpeng Mini</td>
-                        <td>2</td>
-                        <td>Rp150.000</td>
-                        <td><span class="status selesai">Selesai</span></td>
-                        <td>25/08/2025</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Siti Aminah</td>
-                        <td>Jajan Pasar</td>
-                        <td>5</td>
-                        <td>Rp75.000</td>
-                        <td><span class="status proses">Diproses</span></td>
-                        <td>25/08/2025</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Andi</td>
-                        <td>Lemper Ayam</td>
-                        <td>10</td>
-                        <td>Rp100.000</td>
-                        <td><span class="status batal">Batal</span></td>
-                        <td>24/08/2025</td>
+                        <td>Jajanan Pasar</td>
+                        <td>Jajanan dari pasar</td>
+                        <td><button class="btn-edit" onclick="openPopup('popupEdit', 'Jajanan Pasar')">Edit Kategori</button></td>
                     </tr>
                 </tbody>
             </table>
         </div>
+        <div class="popup" id="popupEdit">
+            <div class="popup-content">
+                <span class="close-popup" onclick="closePopup('popupEdit')">&times;</span>
+                <h2>Edit Kategori</h2>
+                <p id="kategoriNama"></p>
+                <form>
+                    <label>Nama Kategori</label>
+                    <input type="text" placeholder="Masukkan nama baru">
+
+                    <label>Konfirmasi Password</label>
+                    <input type="password" placeholder="Konfirmasi password">
+
+                    <button type="submit" class="btn-save">Simpan</button>
+                    <button type="submit" class="btn-erase">Hapus</button>
+                    <button type="button" class="btn-cancel" onclick="closePopup('popupEdit')">Batal</button>
+                </form>
+            </div>
+        </div>
     </div>
+    
+    <script>
+        function openPopup(id, nama) {
+        document.getElementById(id).style.display = "flex";
+        document.getElementById("kategoriNama").innerText = "categori: " + nama;
+        }
+        function closePopup(id) {
+        document.getElementById(id).style.display = "none";
+        }
+    </script>
 </body>
 </html>
