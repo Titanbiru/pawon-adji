@@ -146,7 +146,7 @@ body{
     .navbar-item {
         display: none;
         flex-direction: column;
-        background-color: #521c0d;
+        background-color: rgba(82, 28, 13, 0.3);
         padding: 1rem;
         width: 100%;
         transition: max-height 0.3s ease-in-out;
@@ -182,7 +182,7 @@ body{
     font-family: 'roboto';
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding-top: 6rem;
+    padding-top: 5rem;
 }
 
 .button-header {

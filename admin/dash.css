@@ -41,16 +41,18 @@ body{
 .navbar h1 {
     font-size: 1.5rem;
     font-weight: bold;
-    font-family: lobster;
+    font-family: "Lobster";
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .navbar-item {
     padding: 1rem 0;
     display: flex;
+    font-family: 'roboto';
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    text-shadow: 2px 3px black;
 }
 
 .navbar-item ul {
@@ -79,11 +81,20 @@ body{
     margin-left: auto;
 }
 
+.nav-left button {
+    padding: 0;
+}
+
 .navbar-toggler svg {
     width: 24px;
     height: 24px;
     vertical-align: middle;
     bottom: 5px;
+    color: white;
+}
+
+.navbar-toggler svg{
+    padding: 0rem ;
 }
 
 .navbar-toggler:hover {
@@ -92,7 +103,7 @@ body{
 }
 
 .nav-link svg{
-    color: black;
+    color: white;
     width: 1.5rem;
     height: 1.5rem;
     vertical-align: middle;
@@ -175,7 +186,7 @@ body{
     font-family: 'roboto';
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding-top: 6rem;
+    padding-top: 5rem;
 }
 
 .title{
