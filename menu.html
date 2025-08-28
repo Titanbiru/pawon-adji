@@ -251,16 +251,11 @@
     </footer>   
     <script>
         const kategoriList = document.querySelector('.kategori ul');
-        const toggleBtn = document.getElementById('navbar-toggler');
-        const menu = document.getElementById('navbar-item');
 
         let isDown = false;
         let startX;
         let scrollLeft;
         
-        toggleBtn.addEventListener('click', () => {
-            menu.classList.toggle('show'); 
-        });
 
         kategoriList.addEventListener('mousedown', (e) => {
             isDown = true;
